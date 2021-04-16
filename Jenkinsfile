@@ -15,24 +15,5 @@ pipeline {
                          
                      }
                  }
-           stage('two')
-
-           steps {
-
-            
-                switch(env.Post) {
-
-                    case 'Test1':
-                    echo "this is Test1"
-                    break;
-                    case 'Test2':
-                    echo "this is Test2"
-                    break;
-                }
-
-            }               
-           }
        }
-                     
-   }
-   }
+}
