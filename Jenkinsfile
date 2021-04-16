@@ -1,11 +1,10 @@
 pipeline {
-
+  
        agent any
        stages{
          stage('one')
                 steps { 
-                    script {
-                     switch (env.Pre) {
+                   script {switch (env.Pre) {
                          case 'Test1':
                          echo " this is Test1"
                          break;
@@ -17,9 +16,10 @@ pipeline {
                      }
                  }
            stage('two')
-           steps{
 
-            script {
+           steps {
+
+            
                 switch(env.Post) {
 
                     case 'Test1':
@@ -32,5 +32,7 @@ pipeline {
 
             }               
            }
-       }
+       }}
+                     
+   }
    }
