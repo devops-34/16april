@@ -2,7 +2,7 @@ pipeline {
 
        agent any
        stages{
-         stage ('one')
+         stage('one')
                 steps { 
                     script {
                      switch (env.Pre) {
@@ -16,7 +16,7 @@ pipeline {
                          
                      }
                  }
-           stage ('two')
+           stage('two')
            steps{
 
             script {
