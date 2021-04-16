@@ -6,10 +6,10 @@ pipeline {
                 steps { 
                     script {
                      switch (env.Pre) {
-                         case 'Test1'
+                         case 'Test1':
                          echo " this is Test1"
                          break;
-                         case 'Test2'
+                         case 'Test2':
                          echo "this is Test2"
                          break;
 } 
@@ -22,10 +22,10 @@ pipeline {
             script {
                 switch(env.Post) {
 
-                    case 'Test1'
+                    case 'Test1':
                     echo "this is Test1"
                     break;
-                    case 'Test2'
+                    case 'Test2':
                     echo "this is Test2"
                     break;
                 }
