@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+      stages {
+          stage('one') 
+          
+          {
+            when {
+                expression { 
+                   return params.Env == 'Pre'
+                }
+            }
+            steps {
+                    sh """
+                    echo "deploy to pre"
+                    """
+                }
+            }
+
+      }
+
+        
+   }
