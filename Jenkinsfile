@@ -6,11 +6,19 @@ pipeline {
         DB_ENGINE    = 'DB'
     }
     stages {
-        stage('Example Build') {
+        stage('git') {
             steps {
-                echo 'Hello World'
+                sh 'git clone https://github.com/devops-34/16april'
+                
             }
         }
+        stage{
+        when {
+				expression {
+					return env.Server == 'Test1' || env.Server == 'Test2'
+				}
+        }
+			}
         stage('Example Deploy') {
             when {
                 branch 'Test1'
