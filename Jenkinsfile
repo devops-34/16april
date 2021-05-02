@@ -24,9 +24,12 @@ stages{
 }  
     
  stage('git') {
-     steps 
+     steps   {
+
+         sh ' git clone  https://github.com/devops-34/16april'
+     }
  }
- sh ' git clone https://github.com/devops-34/16april'
+ 
  
 }
 
@@ -35,5 +38,8 @@ when {
 				environment name: 'Test1', value: 'Test'
 			}
 
+ steps   {
 
+         sh 'IPaddress'
+     }
 }
