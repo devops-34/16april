@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage ('SCM checkout') {
+            steps {
+                git credentialsId: 'GITHUB_USER', url: 'https://github.com/jenk.git'
+                }
+        }
+
+       
+
+     //    steps(['']) {
+     //    sh 'sshpass -p Jenkins scp -o StrictHostKeyChecking=no webapp/target/*.war root@3:/'
+		 
+     // }
+   //}
+        }
+   
+    }
