@@ -16,7 +16,7 @@ pipeline {
                 branch 'Test1'
                   when {
                     environment name: 'Test1', value: 'Test'
-                    environment name: 'UAT', value: 'Test'
+                    
                      
                 }
             }
