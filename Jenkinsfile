@@ -26,7 +26,7 @@ stages{
  stage('git') {
      steps 
  }
- sh ' git clone
+ sh ' git clone https://github.com/devops-34/16april'
  
 }
 
