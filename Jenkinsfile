@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Example Deploy') {
             when {
-                branch 'production'
+                branch 'Test1'
                   allOf {
                     environment name: 'Test1', value: 'Test'
                     environment name: 'UAT', value: 'Test'
