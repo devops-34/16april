@@ -3,7 +3,7 @@ pipeline {
     
     environment {
       
-        DB_ENGINE    = 'DB'
+        DB_ENGINE = 'DB'
     }
     stages {
         stage('git') {
@@ -22,7 +22,8 @@ pipeline {
         stage('Example Deploy') {
             when {
                 branch 'Test1'
-                  when {
+                  when 
+                  allof { {
                     environment name: 'Test1', value: 'Test'
                     
                      
