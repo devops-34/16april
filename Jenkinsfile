@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    
+    environment {
+      
+        DB_ENGINE    = 'DB'
+    }
     stages {
         stage('Example Build') {
             steps {
@@ -9,13 +14,16 @@ pipeline {
         stage('Example Deploy') {
             when {
                 branch 'production'
-                anyOf {
+                 {
                     environment name: 'Test1', value: 'Test'
-                    environment name: 'Test2', value: 'UAT'
+                    environment name: 'UAT', value: 'Test'
+                     
                 }
             }
             steps {
-                echo 'Deploying'
+                echo "Database engine is ${DB_ENGINE}"
+                
+                
             }
         }
     }
